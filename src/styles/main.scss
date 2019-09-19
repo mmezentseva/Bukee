@@ -36,6 +36,7 @@ body {
     padding-bottom: 166px;
     &__logo {
         background-image: url("../img/logo.svg");
+        background-repeat: no-repeat;
         display: block;
         width: 137px;
         height: 28px;
@@ -75,6 +76,11 @@ body {
         letter-spacing: 0.7px;
         margin-bottom: 23px;
     }
+    &__name-top {
+        margin-top: 16px;
+        margin-left: 0;
+        color: #696980;
+    }
     &__title {
         font-size: 48px;
         font-weight: 700;
@@ -92,8 +98,14 @@ body {
         font-family: "Open Sans", sans-serif;
         font-size: 15px;
         line-height: 24px;
-        letter-spacing: 0.7px;
+        letter-spacing: 0.75px;
         margin-top: 18px;
+    }
+    &__description-author {
+        color: #696980;
+        font-size: 15px;
+        padding-right: 70px;
+        padding-bottom: 20px;
     }
     &__btn {
         display: block;
@@ -130,5 +142,49 @@ body {
         font-size: 12px;
         font-style: italic;
         letter-spacing: 0.4px;
+    }
+}
+
+.page-author {
+    padding-top: 161px;
+}
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img {
+        margin-top: 47px;
+        margin-right: 44px;
+    }
+}
+
+.block-counter {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 152px;
+    p {
+        font-family: "Open Sans", sans-serif;
+        text-align: center;
+        font-size: 18px;
+        color: #696980;
+        span {
+            font-family: "Roboto Slab", serif;
+            display: block;
+            font-weight: 100;
+            font-size: 80px;
+            color: $accent-color;
+            margin-bottom: 12px;
+            
+        }
     }
 }
