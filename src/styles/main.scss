@@ -29,7 +29,7 @@ h3 {
 
 .page {
     padding-top: 161px;
-    padding-bottom: 160px;
+    padding-bottom: 230px;
     &-gray {
         background-color: $bg-light-color;
     }
@@ -41,11 +41,19 @@ h3 {
         letter-spacing: 2px;
         color: #44444f;
     }
+    &__title-books {
+        margin-bottom: 24px;
+        margin-top: 28px;
+    }
     &__subtitle {
         font-size: 18px;
         color: $accent-color;
         text-align: center;
         letter-spacing: 0.9px;
+    }
+    &__subtitle-books {
+        margin-bottom: 26px;
+        margin-top: 3px;
     }
 }
 
@@ -55,6 +63,30 @@ h3 {
     background-size: cover; 
     color: $light-color;
     padding-bottom: 157px;
+}
+
+
+.page-author {
+    padding-top: 161px;
+}
+
+.page-books {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__btn {
+        background-color: $accent-color;
+        color: $light-color;
+        font-family: "Roboto Slab", serif;
+        font-size: 18px; 
+        padding: 14px 32px;
+        border-radius: 3px;
+        border: none;
+        display: block;
+        margin: 86px auto;
+        letter-spacing: 0.8px;
+    }
 }
 
 .header {
@@ -171,12 +203,65 @@ h3 {
     justify-content: space-between;
     &-demo {
         display: block;
+        position: relative;
         width: 447px;
         height: 643px;
         background-image: url("../img/bookcover-large.svg");
         background-repeat: no-repeat;
         flex-basis: 500px;
         margin-top: 13px;
+        &__title {
+            position: absolute;
+            font-size: 36px;
+            text-transform: uppercase;
+            top: 118px;
+            left: 132px;
+            letter-spacing: 1.1px;
+            span {
+                font-family: "Open Sans", sans-serif;
+                font-size: 14px;
+                color: $accent-color;
+                display: block;
+                text-transform: initial;
+                margin-top: 10px;
+                letter-spacing: 0.6px;
+            }
+        }
+        &__title-little {
+            top: 71px;
+            left: 74px;
+            letter-spacing: 1px;
+            font-family: "Roboto Slab", serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: $light-color;
+            span {
+                font-size: 12px;
+                margin-top: 7px;
+                margin-left: -4px;
+                font-weight: 400;
+            }
+        }
+        &__author {
+            position: absolute;
+            bottom: 43px;
+            left: 83px;
+            letter-spacing: 0.9px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            color: $accent-color;
+        }
+        &__author-little {
+            bottom: 105px;
+            left: 81px;
+            letter-spacing: 0.6px;
+            font-size: 12px;
+        }
+    }
+    &-demo-little {
+        background-image: url("../img/bookcover-small.svg"); 
+        width: 269px;
+        height: 409px;
     }
     small {
         font-family: "Open Sans", sans-serif;
@@ -184,10 +269,6 @@ h3 {
         font-style: italic;
         letter-spacing: 0.5px;
     }
-}
-
-.page-author {
-    padding-top: 161px;
 }
 
 .block-author {
@@ -238,7 +319,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 82px;
-    h3 {
+    &-text__title {
         margin-bottom: 18px;
         margin-left: 2px;
     }
@@ -257,9 +338,10 @@ h3 {
         }
     }
     &-table {
-        flex-basis: 49%;
+        flex-basis: 50%;
         &__title {
             color: #44444f;
+            margin-left: 14px;
         }
         &__button {
             color: #fff;
@@ -271,22 +353,22 @@ h3 {
             border: none;
             font-family: "Roboto Slab", serif;
             font-size: 18px;
-            margin-left: 5px;
+            margin-left: 17px;
         }
         &__list {
-            margin: 25px 0 0 0;
+            margin: 25px 0 0 14px;
             padding: 0;
             color: #696980;
             counter-reset: list;
             column-count: 2;
-            column-gap: 32px;
+            column-gap: 29px;
             &>li {
                 position: relative;
                 padding-left: 36px;
                 counter-increment: list;
                 list-style-type: none;
                 margin-bottom: 8px;
-                letter-spacing: 0.7px;
+                letter-spacing: 0.5px;
                 &::before {
                     content: counter(list) ". ";
                 }
@@ -312,8 +394,8 @@ h3 {
         display: flex;
         align-items: center;
         &__title {
-            margin-right: 25px;
-            margin-left: 2px;
+            margin-right: 22px;
+            margin-left: 4px;
         }
         &__list {
             list-style: none;
@@ -330,3 +412,43 @@ h3 {
     }
 }
 
+.block-morebooks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 71px; 
+
+    &-example {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 31.5%;
+    }
+    &-text {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -55px;
+        &__title {
+            font-family: "Roboto Slab", serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        &__desc {
+            text-align: center;
+            letter-spacing: 0.8px;
+            margin-top: 17px;
+
+        }
+        &__more {
+            color: $accent-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    }
+}
