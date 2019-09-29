@@ -10,6 +10,9 @@ $light-color: #fff;
 $accent-color: #65e496;
 $bg-light-color: #f5f6fa;
 $bg-dark-color: #44444f;
+$gray-color: #9191b5;
+$title-color: #44444f;
+$font-color: #696980;
 
 body {
     font-family: 'Roboto Slab', serif;
@@ -30,6 +33,7 @@ h3 {
 .page {
     padding-top: 161px;
     padding-bottom: 230px;
+
     &-gray {
         background-color: $bg-light-color;
     }
@@ -39,7 +43,7 @@ h3 {
         margin-bottom: 26px;
         margin-top: 3px;
         letter-spacing: 2px;
-        color: #44444f;
+        color: $title-color;
     }
     &__title-books {
         margin-bottom: 24px;
@@ -55,6 +59,7 @@ h3 {
         margin-bottom: 26px;
         margin-top: 3px;
     }
+
     &__btn {
         background: linear-gradient(to top left, #65e49a, #65e4b2);
         color: $light-color;
@@ -92,6 +97,12 @@ h3 {
 .page-blog {
     background-color: $bg-light-color;
     margin-top: -98px;
+    padding-bottom: 92px;
+    padding-top: 161px;
+}
+
+.page-letter {
+    padding-top: 160px;
 }
 
 .header {
@@ -146,16 +157,17 @@ h3 {
         font-size: 18px;
         letter-spacing: 0.9px;
         margin-top: 12px;
-        color: #696980;
+        color: $light-color;
     }
     &__name-events {
         margin-top: -5px;
         margin-left: 3px;
+        color: $font-color;
     }
     &__name-author {
         margin-top: 16px;
         margin-left: 1px;
-        color: #696980;
+        color: $font-color;
     }
     &__title {
         font-size: 48px;
@@ -163,7 +175,7 @@ h3 {
         letter-spacing: 1.8px;
         margin-bottom: 39px;
         margin-top: 44px;
-        color: #44444f;
+        color: $light-color;
         span {
             display: block;
             color: $accent-color;
@@ -174,6 +186,7 @@ h3 {
     }
     &__title-events {
         margin-top: 33px;
+        color: $title-color;
         span {
             margin-left: 3px;
         }
@@ -181,18 +194,19 @@ h3 {
     &__title-author {
         margin-bottom: 36px;
         margin-top: 32px;
+        color: $title-color;
     }
     &__description {
-        font-family: "Open Sans", sans-serif;
+        font-family: "Open Sans";
         font-size: 15px;
         line-height: 24px;
         letter-spacing: 0.75px;
         margin-top: 20px;
         width: 88%;
-        color: #696980;
+        color: $light-color;
     }
     &__description-author {
-        color: #696980;
+        color: $font-color;
         font-size: 15px;
         padding-right: 70px;
         padding-bottom: 4px;
@@ -220,7 +234,7 @@ h3 {
     }
     &-item {
         margin-bottom: 57px;
-        color: #696980;
+        color: $font-color;
         &__date {
             font-size: 15px;
             font-family: "Open Sans", sans-serif;
@@ -231,7 +245,7 @@ h3 {
             font-size: 18px;
             letter-spacing: 0.9px;
             margin-bottom: 16px;
-            color: #44444f;
+            color: $title-color;
             font-weight: 700;
         }
         &__desc {
@@ -367,7 +381,7 @@ h3 {
         font-family: "Open Sans", sans-serif;
         text-align: center;
         font-size: 18px;
-        color: #696980;
+        color: $font-color;
         letter-spacing: 0.9px;
         &:nth-child(2) {
             margin-left: 19px;
@@ -400,16 +414,16 @@ h3 {
     &-text {
         flex-basis: 41%;
         &__title {
-            color: #44444f;
+            color: $title-color;
         }
         &__article {
-            color: #696980;
+            color: $font-color;
         }
     }
     &-table {
         flex-basis: 50%;
         &__title {
-            color: #44444f;
+            color: $title-color;
             margin-left: 14px;
         }
         &__button {
@@ -427,7 +441,7 @@ h3 {
         &__list {
             margin: 25px 0 0 14px;
             padding: 0;
-            color: #696980;
+            color: $font-color;
             counter-reset: list;
             column-count: 2;
             column-gap: 29px;
@@ -458,7 +472,7 @@ h3 {
     }
     &-link {
         font-size: 18px;
-        color: #44444f;
+        color: $title-color;
         font-weight: 700;
         display: flex;
         align-items: center;
@@ -505,13 +519,13 @@ h3 {
             font-family: "Roboto Slab", serif;
             font-size: 24px;
             font-weight: 700;
-            color: #44444f;
+            color: $title-color;
         }
         &__desc {
             text-align: center;
             letter-spacing: 0.8px;
             margin-top: 17px;
-            color: #696980;
+            color: $font-color;
 
         }
         &__more {
@@ -530,7 +544,7 @@ h3 {
     margin-top: 83px;
     h4 {
         font-size: 18px;
-        color: #44444f;
+        color: $title-color;
         margin-top: 16px;
         letter-spacing: 0.9px;
         font-weight: 700;
@@ -569,7 +583,7 @@ h3 {
     &__desc {
         font-size: 15px;
         font-family: "Open Sans", sans-serif;
-        color: #696980;
+        color: $font-color;
         margin-top: -3px;
         letter-spacing: 0.7px;
     }
@@ -578,5 +592,63 @@ h3 {
         margin: 69px auto;
         padding: 14px 28px;
         max-width: 265px;
+    }
+}
+
+.block-letter {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        flex-basis: 49%;
+    }
+    &__title {
+        font-size: 48px;
+        margin-bottom: 23px;
+        letter-spacing: 1.9px;
+        margin-top: 8px;
+        color: $title-color;
+        font-weight: 700;
+    }
+    &__text {
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 0.75px;
+        color: $font-color;
+    }
+    &__input {
+        width: 100%;
+        background-color: $bg-dark-color;
+        border: none;
+        color: $gray-color;
+        padding: 15px 30px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        letter-spacing: 0.6px;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $gray-color;
+        }
+    }
+    &__btn {
+        display: block;
+        background: linear-gradient(to top left, #65e49a, #65e4b2);
+        color: $light-color;
+        font-size: 18px;
+        text-decoration: none;
+        width: 100%;
+        border-radius: 3px;
+        border: none;
+        text-align: center;
+        font-size: 18px;
+        margin-top: 48px;
+        padding: 13px 0px 13px 4px;
+        letter-spacing: 0.7px;
+        margin-top: 22px;
+        box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+        &:focus {
+            outline: none;
+        }
     }
 }
