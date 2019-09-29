@@ -146,11 +146,18 @@ h3 {
 
 .block-text {
     flex-basis: calc(100% - 500px);
+    &--width {
+        flex-basis: calc(93% - 517px);
+    }
     &__name {
         font-family: "Open Sans", sans-serif;
         font-size: 18px;
         letter-spacing: 0.9px;
         margin-top: 12px;
+    }
+    &__name-events {
+        margin-top: -5px;
+        margin-left: 3px;
     }
     &__name-author {
         margin-top: 16px;
@@ -169,6 +176,12 @@ h3 {
             font-size: 18px;
             letter-spacing: 0.9px;
             margin-top: 24px;
+        }
+    }
+    &__title-events {
+        margin-top: 33px;
+        span {
+            margin-left: 3px;
         }
     }
     &__title-author {
@@ -220,6 +233,41 @@ h3 {
             z-index: -1;
             bottom: -2px;
             border-radius: 3px;
+        }
+    }
+    &-item {
+        margin-bottom: 57px;
+        &__date {
+            font-size: 15px;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
+        }
+        &__title {
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            margin-bottom: 16px;
+        }
+        &__desc {
+            font-size: 15px;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 0.75px;
+        }
+        &__btn {
+            display: block;
+            background: linear-gradient(to top left, #65e49a, #65e4b2);
+            color: $light-color;
+            font-size: 18px;
+            text-decoration: none;
+            max-width: 135px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 48px;
+            padding: 11px 0px 13px 3px;
+            letter-spacing: 0.7px;
+            margin-top: 25px;
+            box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
         }
     }
 }
@@ -309,6 +357,15 @@ h3 {
         position: absolute;
         z-index: -1;
         right: 0;
+    }
+    &__svg--left {
+        right: inherit;
+        left: 0;
+    }
+    &__img--left {
+        margin-top: 49px;
+        margin-left: 51px;
+        margin-right: 0;
     }
     &__img {
         margin-top: 47px;
