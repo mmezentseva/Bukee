@@ -652,3 +652,76 @@ h3 {
         }
     }
 }
+
+.footer {
+    background-color: $bg-dark-color;
+    color: $gray-color;
+    padding: 155px 0 163px;
+    margin-top: -91px;
+}
+
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+    &>div {
+        flex-basis: 23%;
+        font-family: "Open Sans", sans-serif;
+        &:first-child {
+            flex-basis: 31%;
+        }
+    }
+    &__logo {
+        display: block;
+        width: 137px;
+        height: 28px;
+        background-image: url(../img/logoFooter.svg);
+    }
+    &__desc {
+        margin-top: 33px;
+        letter-spacing: 0.55px;
+        margin-bottom: -10px;
+    }
+    &__title {
+       color: $accent-color;
+       font-size: 18px;
+       text-transform: uppercase;
+       margin-top: 15px;
+       margin-bottom: 20px;
+       letter-spacing: 1.7px;
+       margin-left: 2px;
+       &--contacts {
+            letter-spacing: 1.2px;
+            margin-left: -4px;
+       }
+    }
+    &__list {
+        list-style-type: none;
+        font-family: "Open Sans", sans-serif;
+        padding-left: 0;
+        letter-spacing: 1.7px;
+        margin-left: 2px;
+        &--links {
+            &>li {
+                margin-bottom: 4px;
+                letter-spacing: 0.6px;
+            }  
+        }
+        &--contacts {
+            margin-left: -4px;
+            letter-spacing: 0.7px;
+            margin-bottom: 11px;
+        }
+    }
+    &__social {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+        &>li {
+            margin-right: 18px;
+            margin-left: -4px;
+            &>a {
+                color: $accent-color;
+            }
+        }
+    }
+}
