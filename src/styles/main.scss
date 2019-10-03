@@ -33,9 +33,17 @@ h3 {
 .page {
     padding-top: 161px;
     padding-bottom: 230px;
+    position: relative;
 
     &-gray {
         background-color: $bg-light-color;
+    }
+
+    &-events {
+        padding-top: 152px; 
+    }
+    &-carousel {
+        padding-top: 69px;
     }
     &__title {
         font-size: 48px;
@@ -73,6 +81,12 @@ h3 {
         letter-spacing: 0.8px;
         box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
     }
+    &__svg {
+        position: absolute;
+        bottom: -106px;
+        width: 100%;
+        z-index: -1;
+    }
 }
 
 .page-main {
@@ -96,7 +110,7 @@ h3 {
 
 .page-blog {
     background-color: $bg-light-color;
-    margin-top: -98px;
+    margin-top: -96px;
     padding-bottom: 92px;
     padding-top: 161px;
 }
