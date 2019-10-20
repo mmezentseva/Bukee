@@ -37,11 +37,11 @@ h3 {
 }
 
 .page {
-    padding-top: 161px;
-    padding-bottom: 230px;
+    padding-top: 100px;
+    padding-bottom: 130px;
     position: relative;
     @media (max-width: 1020px) {
-        padding-top: 120px;
+        padding-top: 70px;
         padding-bottom: 120px;
     }
     @media (max-width: 480px) {
@@ -143,6 +143,7 @@ h3 {
     padding-top: 161px;
     @media (max-width:1020px) {
         padding-top: 130px;
+        padding-bottom: 80px;
     }
     @media (max-width: 480px) {
         padding-top: 100px;
@@ -163,10 +164,10 @@ h3 {
 .page-blog {
     background-color: $bg-light-color;
     margin-top: -96px;
-    padding-bottom: 92px;
-    padding-top: 161px;
+    padding-top: 100px;
+    padding-bottom: 20px;
     @media (max-width:1020px) {
-        padding-top: 120px;
+        padding-top: 90px;
         padding-bottom: 40px;
     }
     @media (max-width: 480px) {
@@ -175,7 +176,8 @@ h3 {
 }
 
 .page-letter {
-    padding-top: 160px;
+    padding-top: 80px;
+    padding-bottom: 150px;
     @media (max-width:900px) {
         padding-top: 80px;
         padding-bottom: 160px;
@@ -214,20 +216,26 @@ h3 {
             justify-content: center;
             flex-wrap: wrap;
         }
-        @media (max-width: 480px) {
-            display: none;
-        }
         &__item {
             margin-left: 23px;
             padding-bottom: 3px;
             border-bottom: 3px solid transparent;
             transition: 0.3s;
+            @media (max-width: 480px) {
+                border-bottom: 2px solid transparent;
+            }
             &:hover {
                 border-bottom: 3px solid $accent-color;
+                @media (max-width: 480px) {
+                    border-bottom: 2px solid $accent-color;
+                }
             }
         }
         &__item.active {
             border-bottom: 3px solid $accent-color;
+            @media (max-width: 480px) {
+                border-bottom: 2px solid $accent-color;
+            }
         }
         &__link {
             color: $light-color;
@@ -428,13 +436,14 @@ h3 {
     }
     &-demo {
         display: block;
-        position: relative;
+        position: relative;	       
         width: 100%;
-        height: 643px;
-        background-image: url("../img/bookcover-large.svg");
-        background-repeat: no-repeat;
-        flex-basis: 500px;
-        margin-top: 13px;
+        height: 643px;	        
+        background-image: url("../img/bookcover-large.svg");	       
+        background-repeat: no-repeat;	   
+        flex-basis: 500px;	        
+        margin-top: 13px;	        
+
         &--main {
             @media (max-width:1020px) {
                 width: 447px;
@@ -443,9 +452,9 @@ h3 {
                 margin: 29px auto;
             }
             @media (max-width:500px) {
-                width: 50%px;
+                width: 50%;
                 height: 643px;
-                flex-basis: 650px;
+                flex-basis: 500px;
                 margin: 29px auto;
             }
         }
@@ -575,13 +584,13 @@ h3 {
 .block-counter {
     display: flex;
     justify-content: space-between;
-    margin: 193px 62px 141px 83px;
+    margin: 160px 62px 100px 83px;
     @media (max-width: 1020px) {
-        margin: 100px 62px 141px 83px;
+        margin: 100px 62px 0px 83px;
     }
     @media (max-width: 850px) {
         margin-top: 50px;
-        margin-bottom: 100px;
+        margin-bottom: 0px;
     } 
     @media (max-width: 750px) {
         flex-direction: column;
@@ -979,10 +988,10 @@ h3 {
 .footer {
     background-color: $bg-dark-color;
     color: $gray-color;
-    padding: 155px 0 163px;
+    padding: 90px 0 90px;
     margin-top: -91px;
     @media (max-width: 1020px) {
-        padding: 55px 0 40px;
+        padding: 65px 0 40px;
     }
 }
 
@@ -1154,4 +1163,54 @@ h3 {
             border-radius: 10px;
         }
     }
+}
+
+.show-menu-btn, .hide-menu-btn {
+    cursor: pointer;
+    display: none; 
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+@media (max-width: 480px) {
+    .show-menu-btn {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+    .header-list {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: #333;
+        right: -100%;
+        top: -10px;
+        text-align: center;
+        line-height: normal;
+        transition: 0.7s;
+        z-index: 1;
+        &__item {
+            display: block;
+            padding: 10px 5px; 
+            width: 100px;
+            margin: 0 auto;
+        }
+    }
+
+    .hide-menu-btn { 
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px; 
+    }
+    #chk:checked ~ .header-list { 
+        right: 0;
+    } 
 }
