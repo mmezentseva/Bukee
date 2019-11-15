@@ -118,10 +118,10 @@ h3 {
     }
     &__svg {
         position: absolute;
-        top: 0;
+        top: -16%;
         width: 100%;
+        height: 119%;
         z-index: -1;
-        min-height: 694px;
         @media (max-width: 1020px) {
             display: none;
         }
@@ -198,8 +198,12 @@ h3 {
         flex-direction: column;
         padding-bottom: 50px;
     }
+    @media (max-width: 480px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
     &__logo {
-        background-image: url("../img/logo.svg");
+        background-image: url("../img/logo.png");
         background-repeat: no-repeat;
         display: block;
         width: 137px;
@@ -433,30 +437,31 @@ h3 {
     @media (max-width:1020px) {
         flex-direction: column-reverse;
         align-items: center;
+        justify-content: center;
     }
     &-demo {
-        display: block;
+        display: flex;
         position: relative;	       
         width: 100%;
         height: 643px;	        
         background-image: url("../img/bookcover-large.svg");	       
         background-repeat: no-repeat;	   
         flex-basis: 500px;	        
-        margin-top: 13px;	        
+        margin-top: 13px;       
 
         &--main {
-            @media (max-width:1020px) {
+            @media (max-width: 1020px) {
                 width: 447px;
                 height: 643px;
                 flex-basis: 650px;
                 margin: 29px auto;
             }
-            @media (max-width:500px) {
-                width: 50%;
-                height: 643px;
-                flex-basis: 500px;
-                margin: 29px auto;
-            }
+            @media (max-width: 500px) {
+                background-image: url("../img/bookcover-small.svg");
+                width: 269px;
+                height: 409px;
+                flex-basis: 409px;; 
+            } 
         }
         &__title {
             position: absolute;
@@ -465,6 +470,11 @@ h3 {
             top: 118px;
             left: 132px;
             letter-spacing: 1.1px;
+            @media (max-width: 500px) {
+                font-size: 24px;
+                top: 60px;
+                left: 60px;
+            } 
             span {
                 font-family: "Open Sans", sans-serif;
                 font-size: 14px;
@@ -476,6 +486,8 @@ h3 {
             }
         }
         &__title-little {
+            position: absolute;
+            text-transform: uppercase;
             top: 71px;
             left: 74px;
             letter-spacing: 1px;
@@ -484,6 +496,10 @@ h3 {
             font-weight: 700;
             color: $light-color;
             span {
+                font-family: "Open Sans", sans-serif;
+                display: block;
+                text-transform: initial;
+                color: $accent-color;
                 font-size: 12px;
                 margin-top: 7px;
                 margin-left: -4px;
@@ -498,8 +514,16 @@ h3 {
             font-family: "Open Sans", sans-serif;
             font-size: 14px;
             color: $accent-color;
+            @media (max-width: 500px) {
+                font-size: 12px;
+                bottom: 25px;
+                left: 60px;
+            } 
         }
         &__author-little {
+            position: absolute;
+            font-family: "Open Sans", sans-serif;
+            color: $accent-color;
             bottom: 105px;
             left: 81px;
             letter-spacing: 0.6px;
@@ -1018,7 +1042,7 @@ h3 {
         display: block;
         width: 137px;
         height: 28px;
-        background-image: url(../img/logoFooter.svg);
+        background-image: url(../img/logoFooter.png);
         @media (max-width: 900px) {
             margin: 0 auto;
         }
@@ -1180,8 +1204,8 @@ h3 {
     .show-menu-btn {
         display: block;
         position: absolute;
-        top: 30px;
-        right: 40px;
+        top: 25px;
+        right: 18px;
     }
     .header-list {
         position: fixed;
